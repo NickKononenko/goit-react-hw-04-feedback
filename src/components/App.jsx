@@ -18,12 +18,19 @@ const App = () => {
   };
 
   const handleFeedback = option => {
-    if (option === 'good') {
-      setGood(good + 1);
-    } else if (option === 'neutral') {
-      setNeutral(neutral + 1);
-    } else if (option === 'bad') {
-      setBad(bad + 1);
+    switch (option) {
+      case 'good':
+        setGood(good + 1);
+        break;
+      case 'neutral':
+        setNeutral(neutral + 1);
+        break;
+      case 'bad':
+        setBad(bad + 1);
+        break;
+
+      default:
+        return;
     }
   };
 
